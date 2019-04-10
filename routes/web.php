@@ -41,7 +41,7 @@ Route::get('/buyers', [
     'as' => 'buyers.showBuyers']);
 
 Route::post('buyers', [
-   'uses' => 'BuyersController@buyers',
+   'uses' => 'BuyersController@saveBuyers',
    'as' => 'buyers.save'
 ]);
 

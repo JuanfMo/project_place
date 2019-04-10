@@ -18,14 +18,14 @@ class CreateBuyersTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('lastname');
-            $table->integer('document');
+            $table->bigInteger('document');
             $table->string('documentType');
             $table->string('email');
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('address');
-            $table->integer('totalValue');
-            $table->string('status');
-            $table->integer('ref');
+            $table->bigInteger('totalValue');
+            $table->string('status')->default('FAILED');
+            $table->string('ref')->default(' ');
         });
     }
 

@@ -8,5 +8,5 @@ class Buyers extends Model
 {
     public $table = 'buyers';
 
-    public $fillable = ['fullName', 'email', 'phone','address', 'totalValue', 'status', 'ref'];
+    public $fillable = ['document', 'documentType', 'name', 'lastname', 'email', 'phone','address', 'totalValue', 'status', 'ref'];
 }

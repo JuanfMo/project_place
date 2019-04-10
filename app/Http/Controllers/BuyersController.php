@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Buyers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Session;
 
 class BuyersController extends Controller
@@ -21,20 +22,34 @@ class BuyersController extends Controller
     /**
     * Save buyers after they submit with initial status .
     *
-    * @return \Illuminate\Http\Response
     */
     public function saveBuyers(Request $request)
    {
        $this->validate($request, [
-        'fullName' => 'required',
-        'email' => 'required|email',
+        'name' => 'required',
+        'document' => 'required',
+        'documentType' => 'required',
+        'lastname' => 'required',
+        'email' => 'required',
         'phone' => 'required',
-        'address' => 'required',
-        'status' => 'required',
-        'ref' => 'required'
+        'totalValue' => 'required',
+        'address' => 'required'
         ]);
         
-       Buyers::create($request->all());
-
+       $data = $request->all();
+       $buyer = new Buyers();
+       $buyer->name = $data['name'];
+       $buyer->lastname = $data['name'];
+       $buyer->document = $data['document'];
+       $buyer->documentType = $data['documentType'];
+       $buyer->email = $data['email'];
+       $buyer->phone = $data['phone'];
+       $buyer->totalValue = $data['totalValue'];
+       $buyer->address = $data['address'];
+       $buyer->status = 'FAILED';
+       $buyer->ref = Str::random(6);
+       $buyer->save();
+      
+       return redirect()->route('buyers.showBuyers');
     }
 }

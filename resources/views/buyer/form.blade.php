@@ -71,6 +71,7 @@
 
         <div class="form-group {{ $errors->has('totalValue') ? 'has-error' : '' }}">
             {{ Form::label('Total compra: '.$totalPrice)}}
+            {{ Form::hidden('totalValue', $totalPrice) }}
         </div>
 
         <div class="form-group {{ $errors->has('totalValue') ? 'has-error' : '' }}">
