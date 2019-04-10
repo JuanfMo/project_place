@@ -38,7 +38,7 @@
        <hr>
        <div class="row">
            <div class="col-sm-6">
-              <button type="button" class="btn btn-success"> Ir a pagar</button>
+            <a href="{{ route('checkout')}}" type="button" class="btn btn-success"> Ir a pagar</a>
            </div>
        </div>
     @else

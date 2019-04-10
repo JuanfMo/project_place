@@ -26,6 +26,25 @@ Route::get('/shopping-cart', [
     'as' => 'product.shoppingCart'
 ]);
 
+Route::get('/shopping-cart', [
+    'uses' => 'ProductController@getCart',
+    'as' => 'product.shoppingCart'
+]);
+
+Route::get('/checkout', [
+    'uses' => 'ProductController@getCheckout',
+    'as' => 'checkout'
+]);
+
+Route::get('/buyers', [
+    'uses' => 'BuyersController@showBuyers',
+    'as' => 'buyers.showBuyers']);
+
+Route::post('buyers', [
+   'uses' => 'BuyersController@buyers',
+   'as' => 'buyers.save'
+]);
+
 Route::get('/delete-cart-one/{id}', [
     'uses' => 'ProductController@deleteOneCart',
     'as' => 'product.deleteOne'
