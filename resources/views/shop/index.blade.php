@@ -19,7 +19,7 @@
                         Ut tempor, enim ut ornare posuere, lacus erat tempor orci, at pretium eros augue quis orci. Integer sit amet facilisis lorem. </p>
                     <div>
                         <div class="pull-left price">${{ $product->price}}</div>
-                        <a href = "#" class = "btn btn-success pull-right" role = "button">
+                    <a href = "{{ route('product.addToCart', ['id' => $product->id])}}" class = "btn btn-success pull-right" role = "button">
                                 <i class="fa fa-plus" aria-hidden="true"></i> Agregar
                         </a>
                         </div>
