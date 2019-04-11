@@ -74,7 +74,7 @@ class BuyersController extends Controller
        $buyer->ref = Str::random(6);
        $buyer->save();
       
-        $place = $this->init_pay();
+       $place = $this->init_pay();
        $response = $this->request_place_to_pay($buyer->ref, $data['totalValue'], $place);
        return redirect()->route('buyers.showBuyers');
     }
@@ -152,7 +152,7 @@ class BuyersController extends Controller
     }
 
     public function redirect(Request $request){
-        dd($request);
+       // acá se debería manejar la respuestá del webservice cuando se realiza una petición
     }
     
 }
