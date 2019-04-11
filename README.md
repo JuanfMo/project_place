@@ -3,7 +3,7 @@
 
 #punto 3 ()
 #esta es mi solución propuesta para el punto 3, teniendo un diagrama de componentes y especicando cada uno de sus componentes
-![alt text](https://raw.githubusercontent.com/juanfmo/project_place/resources/assets/image/image.png)
+![alt text](https://raw.githubusercontent.com/JuanfMo/project_place/master/resources/assets/image/image.png)
 
 #Browser del Cliente: El nodo de browser del cliente es el más importante ya que es el que contiene la lógica, clases y herramientas necesarias para comunicarse con los servidores. Dentro de estas clases, librerías y objetos que se utilizan para lograr la gestión de la página del cliente, el uso de los servicios así como la gestión de las respuestas JSON de los mismos están estructuradas siguiendo el patrón de diseño Modelo Vista Controlador y lógicamente agrupados en tres paquetes:
 
