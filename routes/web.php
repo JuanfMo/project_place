@@ -49,3 +49,8 @@ Route::get('/delete-cart-one/{id}', [
     'uses' => 'ProductController@deleteOneCart',
     'as' => 'product.deleteOne'
 ]);
+
+Route::get('/redirect/{id}', [
+    'uses' => 'BuyersController@redirect',
+    'as' => 'shop.redirect'
+]);
